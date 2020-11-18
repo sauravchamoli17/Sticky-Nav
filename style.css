@@ -19,7 +19,7 @@ body{
 
 header {
   text-align: center;
-  height: 50vh;
+  height: 100vh;
   background: url('./forest.jpg') bottom center no-repeat;
   background-size: cover;
   display: flex;
@@ -28,7 +28,7 @@ header {
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 5.5rem;
     color:rgb(255, 255, 255);
     text-transform: uppercase;
     margin: 0;
@@ -38,9 +38,16 @@ nav {
   background: black;
   top: 0;
   width: 100%;
-  transition:all 0.5s;
+  transition:all 0.2s ease-in-out;
   position: relative;
   z-index: 1;
+  opacity: 0;
+}
+
+.fixed-nav nav {
+  position:fixed;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  opacity: 1;
 }
 
 nav ul {
@@ -64,15 +71,23 @@ li.logo {
   background: white;
   transition: all 0.5s;
   font-weight: 600;
-  font-size: 30px;
 }
 
 li.logo a {
   color: black;
+  font-size: 1.7rem;
+}
+
+li.logo a:hover{
+    text-decoration: none;
 }
 
 .fixed-nav li.logo {
   max-width: 500px;
+}
+
+.fixed-nav .site-wrap {
+  transform: scale(1);
 }
 
 nav a {
@@ -91,7 +106,7 @@ nav a:hover{
 
 .site-wrap{
     max-width: 700px;
-    margin:70px auto;
+    margin:50px auto;
     background: white;
     padding:40px;
     text-align: justify;
